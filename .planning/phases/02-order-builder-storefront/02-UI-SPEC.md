@@ -78,6 +78,8 @@ Accent reserved for: primary CTA buttons (add-to-cart, go-to-payment), the curre
 
 **Rationale:** Phase 1's admin already established a monochrome zinc/black-and-white base. This phase keeps the same dominant/secondary neutrals for brand consistency across admin and storefront, and introduces a single accent (emerald, evoking a football pitch) reserved strictly for calls-to-action and selection state — satisfying the 60/30/10 rule without inventing a competing brand palette PROJECT.md never specified.
 
+**Primary visual anchor:** On first load, the accent-colored "Legg i handlekurv" button and the sticky cart panel's running total price are the primary visual anchors on the storefront screen; the 28px hero heading is secondary, and unselected form controls stay neutral so the eye is drawn to the action and the price.
+
 ---
 
 ## Copywriting Contract
