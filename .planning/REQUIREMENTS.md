@@ -81,33 +81,33 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PROD-01 | TBD | Pending |
-| PROD-02 | TBD | Pending |
-| PROD-03 | TBD | Pending |
-| PROD-04 | TBD | Pending |
-| PROD-05 | TBD | Pending |
-| PROD-06 | TBD | Pending |
-| PROD-07 | TBD | Pending |
-| PAY-01 | TBD | Pending |
-| PAY-02 | TBD | Pending |
-| PAY-03 | TBD | Pending |
-| ORDER-01 | TBD | Pending |
-| ORDER-02 | TBD | Pending |
-| ORDER-03 | TBD | Pending |
-| ADMIN-01 | TBD | Pending |
-| ADMIN-02 | TBD | Pending |
-| ADMIN-03 | TBD | Pending |
-| ADMIN-04 | TBD | Pending |
-| ADMIN-05 | TBD | Pending |
-| ADMIN-06 | TBD | Pending |
-| CUST-01 | TBD | Pending |
-| CUST-02 | TBD | Pending |
-| GEN-01 | TBD | Pending |
+| PROD-01 | Phase 2 | Pending |
+| PROD-02 | Phase 2 | Pending |
+| PROD-03 | Phase 2 | Pending |
+| PROD-04 | Phase 2 | Pending |
+| PROD-05 | Phase 2 | Pending |
+| PROD-06 | Phase 2 | Pending |
+| PROD-07 | Phase 2 | Pending |
+| PAY-01 | Phase 3 | Pending |
+| PAY-02 | Phase 3 | Pending |
+| PAY-03 | Phase 3 | Pending |
+| ORDER-01 | Phase 3 | Pending |
+| ORDER-02 | Phase 4 | Pending |
+| ORDER-03 | Phase 4 | Pending |
+| ADMIN-01 | Phase 1 | Pending |
+| ADMIN-02 | Phase 5 | Pending |
+| ADMIN-03 | Phase 5 | Pending |
+| ADMIN-04 | Phase 5 | Pending |
+| ADMIN-05 | Phase 5 | Pending |
+| ADMIN-06 | Phase 5 | Pending |
+| CUST-01 | Phase 5 | Pending |
+| CUST-02 | Phase 5 | Pending |
+| GEN-01 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 22 total
-- Mapped to phases: 0 (populated by roadmapper)
-- Unmapped: 22 ⚠️ (expected — filled in during roadmap creation)
+- Mapped to phases: 22
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-07-07*
