@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { createClient } from "@/lib/supabase/client";
+import { createClient as createSupabaseClient } from "@supabase/supabase-js";
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
@@ -13,10 +13,22 @@ if (!ADMIN_EMAIL || !ADMIN_PASSWORD) {
   );
 }
 
+// Plain @supabase/supabase-js client, not the browser-only createBrowserClient
+// wrapper from lib/supabase/client.ts — that wrapper requires a cookie
+// getAll/setAll bridge that only exists in a real browser/Next.js request
+// context, and throws when invoked directly under Node/Vitest.
+function createTestClient() {
+  return createSupabaseClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    { auth: { autoRefreshToken: false, persistSession: false } }
+  );
+}
+
 describeOrSkip(
   "seeded admin signInWithPassword returns a session",
   async () => {
-    const supabase = createClient();
+    const supabase = createTestClient();
     const { data, error } = await supabase.auth.signInWithPassword({
       email: ADMIN_EMAIL!,
       password: ADMIN_PASSWORD!,
@@ -33,7 +45,7 @@ describeOrSkip(
 describeOrSkip(
   "wrong password returns an error, not a session",
   async () => {
-    const supabase = createClient();
+    const supabase = createTestClient();
     const { data, error } = await supabase.auth.signInWithPassword({
       email: ADMIN_EMAIL!,
       password: `${ADMIN_PASSWORD}-wrong`,

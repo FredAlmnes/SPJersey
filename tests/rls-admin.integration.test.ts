@@ -1,7 +1,18 @@
 import { afterAll, beforeAll, expect, test } from "vitest";
 import { createClient as createSupabaseClient } from "@supabase/supabase-js";
-import { createClient } from "@/lib/supabase/client";
 import { createServiceRoleClient } from "@/lib/supabase/service-role";
+
+// Plain @supabase/supabase-js client, not the browser-only createBrowserClient
+// wrapper from lib/supabase/client.ts — that wrapper requires a cookie
+// getAll/setAll bridge that only exists in a real browser/Next.js request
+// context, and throws when invoked directly under Node/Vitest.
+function createAnonClient() {
+  return createSupabaseClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    { auth: { autoRefreshToken: false, persistSession: false } }
+  );
+}
 
 // Positive RLS proof: the authenticated seeded admin (via is_admin() email
 // allowlist match) CAN SELECT a service-role-seeded orders row, while the
@@ -59,7 +70,7 @@ afterAll(async () => {
 runTest(
   "authenticated seeded admin CAN SELECT the seeded orders row",
   async () => {
-    const anonForAuth = createClient();
+    const anonForAuth = createAnonClient();
     const { data: signInData, error: signInError } =
       await anonForAuth.auth.signInWithPassword({
         email: ADMIN_EMAIL!,
@@ -100,7 +111,7 @@ runTest(
 runTest(
   "plain anon key CANNOT SELECT the same seeded orders row (differential control)",
   async () => {
-    const anon = createClient();
+    const anon = createAnonClient();
     const { data, error } = await anon
       .from("orders")
       .select("*")
