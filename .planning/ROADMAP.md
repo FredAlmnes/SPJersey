@@ -30,7 +30,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Database schema exists for orders, order_items, order_status_history, and a notification/idempotency log, with RLS policies restricting access appropriately
   3. A `UNIQUE(provider, provider_ref)` (or equivalent) idempotency guard exists on the schema from day one, ready for Phase 3/4 to use
   4. Static league/team/season catalog and pricing-tier config are defined and loadable by the Next.js app
-**Plans**: TBD
+**Plans**: 5 plans (Walking Skeleton)
+Plans:
+- [ ] 01-01-PLAN.md — Scaffold Next.js 16 + Supabase client factories + Vitest (wave 1)
+- [ ] 01-02-PLAN.md — Schema migration (4 tables + enum + RLS + idempotency guards) + integration tests (wave 2)
+- [ ] 01-03-PLAN.md — Static catalog + pricing tiers + patch list config + unit tests (wave 2)
+- [ ] 01-04-PLAN.md — Admin auth walking skeleton: login → getUser-gated dashboard with real DB read + seed-admin (wave 3)
+- [ ] 01-05-PLAN.md — Human-verify checkpoint: end-to-end walking skeleton (wave 4)
 
 ### Phase 2: Order Builder & Storefront
 **Mode:** mvp
@@ -92,7 +98,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Data Model | 0/TBD | Not started | - |
+| 1. Foundation & Data Model | 0/5 | Not started | - |
 | 2. Order Builder & Storefront | 0/TBD | Not started | - |
 | 3. Payments — Checkout & Webhook-Driven Order Creation | 0/TBD | Not started | - |
 | 4. WhatsApp Supplier Notification | 0/TBD | Not started | - |
