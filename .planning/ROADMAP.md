@@ -13,7 +13,7 @@ SpJersey replaces a manual WhatsApp-ordering business with a self-service Norweg
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation & Data Model** - Supabase schema, RLS, single admin auth, and static catalog config that every later phase depends on
+- [x] **Phase 1: Foundation & Data Model** - Supabase schema, RLS, single admin auth, and static catalog config that every later phase depends on (completed 2026-07-07)
 - [ ] **Phase 2: Order Builder & Storefront** - Customer can configure a full custom-jersey order with live, correct pricing
 - [ ] **Phase 3: Payments — Checkout & Webhook-Driven Order Creation** - Customer can pay by card or Vipps and an order is created only from a verified, idempotent webhook
 - [ ] **Phase 4: WhatsApp Supplier Notification** - Paid orders are automatically and duplicate-safely relayed to the China contact on WhatsApp
@@ -38,20 +38,20 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 **Wave 1**
 
-- [ ] 01-01-PLAN.md — Scaffold Next.js 16 + Supabase client factories + Vitest (wave 1)
+- [x] 01-01-PLAN.md — Scaffold Next.js 16 + Supabase client factories + Vitest (wave 1)
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
-- [ ] 01-02-PLAN.md — Schema migration (4 tables + enum + RLS + idempotency guards) + integration tests (wave 2)
-- [ ] 01-03-PLAN.md — Static catalog + pricing tiers + patch list config + unit tests (wave 2)
+- [x] 01-02-PLAN.md — Schema migration (4 tables + enum + RLS + idempotency guards) + integration tests (wave 2)
+- [x] 01-03-PLAN.md — Static catalog + pricing tiers + patch list config + unit tests (wave 2)
 
 **Wave 3** *(blocked on Wave 2 completion)*
 
-- [ ] 01-04-PLAN.md — Admin auth walking skeleton: login → getUser-gated dashboard with real DB read + seed-admin (wave 3)
+- [x] 01-04-PLAN.md — Admin auth walking skeleton: login → getUser-gated dashboard with real DB read + seed-admin (wave 3)
 
 **Wave 4** *(blocked on Wave 3 completion)*
 
-- [ ] 01-05-PLAN.md — Human-verify checkpoint: end-to-end walking skeleton (wave 4)
+- [x] 01-05-PLAN.md — Human-verify checkpoint: end-to-end walking skeleton (wave 4)
 
 ### Phase 2: Order Builder & Storefront
 
@@ -125,7 +125,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Data Model | 0/5 | Not started | - |
+| 1. Foundation & Data Model | 5/5 | Complete   | 2026-07-07 |
 | 2. Order Builder & Storefront | 0/TBD | Not started | - |
 | 3. Payments — Checkout & Webhook-Driven Order Creation | 0/TBD | Not started | - |
 | 4. WhatsApp Supplier Notification | 0/TBD | Not started | - |
