@@ -42,7 +42,7 @@ Kunden kan legge inn og betale for en skreddersydd drakt-bestilling på nett, og
 ## Context
 
 - Eieren (kompisen) driver dropshipping av fotballdrakter og har én fast kontakt i Kina som produserer draktene. Kontakten er "pro" og kan lage nesten hva som helst av drakt, patch og trykk — flaskehalsen er at bestillinger i dag formidles manuelt.
-- Pakker går i dag via eieren først (ikke direkte fra Kina til sluttkunde), trolig for kvalitetskontroll/videresending.
+- Pakker sendes direkte fra Kina-kontakten til sluttkunden (ren dropshipping, ikke via eieren).
 - Forventet volum i starten er lavt (under 50 bestillinger/mnd), så løsningen trenger ikke skalere til høyt volum eller mange samtidige admin-brukere fra dag én.
 - Foreslått teknisk retning fra brukeren: Supabase som backend, Vercel som deployment, Stripe for betaling (ny for brukeren), WhatsApp API for varsling til Kina-kontakten. Disse velges endelig i research/planlegging.
 
