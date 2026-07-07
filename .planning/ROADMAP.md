@@ -68,7 +68,27 @@ Plans:
   5. Customer sees a live order summary that updates automatically, including bundle discount, when adding multiple jerseys to one order
   6. Customer sees a short explainer near checkout describing what happens after payment (confirmation and tracking come later)
 
-**Plans**: TBD
+**Plans**: 7 plans
+Plans:
+**Wave 1**
+
+- [ ] 02-01-PLAN.md — Cart state core (types/reducer/context) + cascading team & patch logic + test infra (wave 1)
+- [ ] 02-02-PLAN.md — Zod name/number print validation schemas (wave 1)
+
+**Wave 2** *(blocked on Wave 1 completion)*
+
+- [ ] 02-03-PLAN.md — Jersey selection fields: league/team selects, read-only season, size selector, size-guide modal (wave 2)
+- [ ] 02-04-PLAN.md — Patch checkbox group + live-validated name/number print fields (wave 2)
+- [ ] 02-05-PLAN.md — Persistent cart panel + live order summary with bundle discount + undo-on-remove (wave 2)
+
+**Wave 3** *(blocked on Wave 2 completion)*
+
+- [ ] 02-06-PLAN.md — Assembly: configurator form + client root + storefront homepage + checkout explainer (wave 3)
+
+**Wave 4** *(blocked on Wave 3 completion)*
+
+- [ ] 02-07-PLAN.md — Human-verify checkpoint: end-to-end storefront flow (wave 4)
+
 **UI hint**: yes
 
 ### Phase 3: Payments — Checkout & Webhook-Driven Order Creation
@@ -126,7 +146,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Data Model | 5/5 | Complete   | 2026-07-07 |
-| 2. Order Builder & Storefront | 0/TBD | Not started | - |
+| 2. Order Builder & Storefront | 0/7 | Planned | - |
 | 3. Payments — Checkout & Webhook-Driven Order Creation | 0/TBD | Not started | - |
 | 4. WhatsApp Supplier Notification | 0/TBD | Not started | - |
 | 5. Admin Panel — Order Management & Notifications | 0/TBD | Not started | - |

@@ -514,17 +514,19 @@ function SizeGuideModal() {
 | A2 | Recommending installation of `jsdom` + React Testing Library for component-level tests this phase | Standard Stack / Validation Architecture | Medium — CONTEXT.md does not explicitly require component-level test coverage for Phase 2; Phase 1's precedent is heavy on pure-logic unit tests (`config/*.test.ts`), not component rendering tests. If the owner prefers lighter test scope, the planner can scope Wave 0 down to pure-logic tests only (cart reducer, Zod schemas, pricing integration) under the *existing* `vitest.config.ts` "node" environment, skipping the jsdom/RTL install entirely. See Validation Architecture below for both options. |
 | A3 | `<dialog>` element's `showModal()` behavior (focus trap, `::backdrop`) works acceptably without additional polyfill for this project's target browsers | Don't Hand-Roll / Code Examples | Low — Baseline "widely available" status was confirmed via a 2026-dated WebSearch summary of MDN, not a raw MDN fetch in this session; if the owner's actual customer base skews toward unusually old browsers, native `<dialog>` styling (`::backdrop`) may need graceful degradation, but core open/close functionality is safe |
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **Should the cart persist across a page refresh (e.g., `sessionStorage`)?**
    - What we know: CONTEXT.md doesn't require this; D-13/D-16 only require the panel to be visible on the same page, not to survive a reload.
    - What's unclear: Whether losing an in-progress cart on accidental refresh is an acceptable UX gap for a real customer.
    - Recommendation: Out of scope for this phase's locked decisions — build in-memory only (Pattern 1) to keep the phase minimal; flag to the owner as a cheap future enhancement (`sessionStorage` sync on the reducer, zero new dependencies) if refresh-loss turns out to bother real customers.
+   - **RESOLVED:** Plans 02-01/02-05 implement in-memory-only cart state per the recommendation above — no persistence this phase.
 
 2. **Exact size-guide placeholder measurement values (D-17)**
    - What we know: A standard adult S–3XL chest/length table is expected, clearly labeled as a placeholder.
    - What's unclear: No real supplier measurements exist yet (explicitly deferred per D-17) — any numbers used are invented placeholders, not sourced from the China contact.
    - Recommendation: Use generic, plausible football-jersey measurements (chest circumference and garment length in cm, roughly: S ~96/70, M ~100/72, L ~104/74, XL ~110/76, XXL ~116/78, 3XL ~122/80) purely as illustrative placeholder content — these are **not verified against any real supplier spec** and must be tagged as such in the UI (already required by D-17/UI-SPEC's disclaimer copy).
+   - **RESOLVED:** Plan 02-03 Task 3 uses these exact placeholder values verbatim, tagged with the required disclaimer copy.
 
 ## Environment Availability
 
