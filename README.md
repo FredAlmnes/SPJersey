@@ -34,4 +34,25 @@ If Docker becomes available in a future environment, `supabase start` + `supabas
 npx vitest run
 ```
 
-Integration tests under `tests/*.integration.test.ts` require the hosted Supabase env vars above (service-role + anon keys) to be present in `.env.local`.
+Integration tests under `tests/*.integration.test.ts` require the hosted Supabase env vars above (service-role + anon keys) to be present in `.env.local`. `tests/auth.integration.test.ts` and `tests/rls-admin.integration.test.ts` additionally require `ADMIN_EMAIL`/`ADMIN_PASSWORD` to be set and the admin to be seeded (see below) — they skip themselves with a console warning if those env vars are empty.
+
+## Run the full stack locally
+
+1. **Start the app's dependencies** — the hosted Supabase project (no local Docker stack in this environment; see "Database / local dev" above). Ensure `.env.local` has real values for `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, and choose values for `ADMIN_EMAIL` / `ADMIN_PASSWORD`.
+
+2. **Seed the single admin account** (one-off, safe to re-run) — creates the Supabase Auth user AND registers its email in the `admin_users` allowlist, which is what makes `is_admin()` grant the real admin DB access:
+   ```bash
+   npx tsx scripts/seed-admin.ts
+   ```
+
+3. **Run the dev server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Walk through the admin flow:**
+   - Visit [http://localhost:3000/admin](http://localhost:3000/admin) — you should be redirected to `/admin/login` (unauthenticated).
+   - Log in with the `ADMIN_EMAIL` / `ADMIN_PASSWORD` from step 1.
+   - You should land on `/admin`, showing a real order count read from the `orders` table via RLS (expected `0` until real orders exist).
+
+**Alternative — Vercel preview deploy:** push a branch and open the generated Vercel preview URL instead of `localhost:3000`; the same `.env.local` values must be set as Vercel Environment Variables for the preview environment, and step 2's seed script can be run locally against the same hosted Supabase project (it does not need to run inside Vercel).
