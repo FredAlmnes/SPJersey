@@ -44,12 +44,24 @@ export function StorefrontClient() {
     setDraft(EMPTY_DRAFT);
   }
 
+  function handleRemoveItem(item: CartItem) {
+    // CR-02: if the customer removes the item they currently have open for
+    // editing (deliberately, or by letting the 5s undo expire on a stale
+    // "Fjern" click), clear editingId/reset the draft instead of letting
+    // "Oppdater" silently no-op against a now-nonexistent cart entry.
+    if (item.id === editingId) {
+      setEditingId(null);
+      setDraft(EMPTY_DRAFT);
+    }
+  }
+
   return (
     <CartProvider>
-      {/* pb-32 reserves safe-area padding so the mobile fixed cart bar
-          (CartPanel) never overlaps the form's own submit CTA; lg: removes
-          it once the cart panel becomes a sticky side column. */}
-      <div className="flex flex-1 flex-col px-4 pt-8 pb-32 lg:px-6 lg:pb-8">
+      {/* pb-16 reserves safe-area padding matching CartPanel's collapsed
+          mobile bar (h-16); lg: removes it once the cart panel becomes a
+          sticky side column. The expanded bottom sheet is an overlay, not
+          a layout participant, so it doesn't need reserving. */}
+      <div className="flex flex-1 flex-col px-4 pt-8 pb-16 lg:px-6 lg:pb-8">
         <h1 className="text-[28px] leading-[1.2] font-semibold tracking-tight text-black dark:text-zinc-50">
           Sett sammen draktene dine
         </h1>
@@ -65,7 +77,7 @@ export function StorefrontClient() {
             <CheckoutExplainer />
           </div>
 
-          <CartPanel onEditItem={handleEditItem} />
+          <CartPanel onEditItem={handleEditItem} onRemoveItem={handleRemoveItem} />
         </div>
       </div>
     </CartProvider>
