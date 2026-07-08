@@ -13,7 +13,7 @@
 - [x] **PROD-04**: Kunde kan legge inn navn og nummer på trykk, uten ekstra kostnad, med validering (lengde, tillatte tegn)
 - [x] **PROD-05**: Kunde ser live oppdatert ordresammendrag med automatisk pakkerabatt når flere drakter legges til
 - [x] **PROD-06**: Kunde har tilgang til en størrelsesguide/fit chart ved størrelsesvalg
-- [ ] **PROD-07**: Kunde ser en kort forklaringstekst nær checkout om hva som skjer etter betaling (bekreftelse og sporing kommer senere)
+- [x] **PROD-07**: Kunde ser en kort forklaringstekst nær checkout om hva som skjer etter betaling (bekreftelse og sporing kommer senere)
 
 ### Betaling (PAY)
 
@@ -87,7 +87,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PROD-04 | Phase 2 | Complete |
 | PROD-05 | Phase 2 | Complete |
 | PROD-06 | Phase 2 | Complete |
-| PROD-07 | Phase 2 | Pending |
+| PROD-07 | Phase 2 | Complete |
 | PAY-01 | Phase 3 | Pending |
 | PAY-02 | Phase 3 | Pending |
 | PAY-03 | Phase 3 | Pending |

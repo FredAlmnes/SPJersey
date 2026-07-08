@@ -83,7 +83,7 @@ Plans:
 
 **Wave 3** *(blocked on Wave 2 completion)*
 
-- [ ] 02-06-PLAN.md — Assembly: configurator form + client root + storefront homepage + checkout explainer (wave 3)
+- [x] 02-06-PLAN.md — Assembly: configurator form + client root + storefront homepage + checkout explainer (wave 3)
 
 **Wave 4** *(blocked on Wave 3 completion)*
 
@@ -146,7 +146,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Data Model | 5/5 | Complete   | 2026-07-07 |
-| 2. Order Builder & Storefront | 5/7 | In Progress|  |
+| 2. Order Builder & Storefront | 6/7 | In Progress|  |
 | 3. Payments — Checkout & Webhook-Driven Order Creation | 0/TBD | Not started | - |
 | 4. WhatsApp Supplier Notification | 0/TBD | Not started | - |
 | 5. Admin Panel — Order Management & Notifications | 0/TBD | Not started | - |
