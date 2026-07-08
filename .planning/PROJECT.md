@@ -12,15 +12,14 @@ Kunden kan legge inn og betale for en skreddersydd drakt-bestilling på nett, og
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] Kunde kan velge liga/lag/sesong fra et strukturert utvalg av store ligaer (f.eks. Premier League, LaLiga, Serie A, Eliteserien) og kjente landslag — Validert i Phase 2
+- [x] Kunde kan velge størrelse — Validert i Phase 2
+- [x] Kunde kan hake av patcher fra et fast, kort utvalg (evt. "ingen") — Validert i Phase 2
+- [x] Kunde kan legge inn navn og nummer på trykk (uten ekstra kostnad) — Validert i Phase 2
+- [x] Kunde kan bestille flere drakter i én ordre og få automatisk pakkerabatt basert på faste mengde-trinn — Validert i Phase 2
 
 ### Active
 
-- [ ] Kunde kan velge liga/lag/sesong fra et strukturert utvalg av store ligaer (f.eks. Premier League, LaLiga, Serie A, Eliteserien) og kjente landslag
-- [ ] Kunde kan velge størrelse
-- [ ] Kunde kan hake av patcher fra et fast, kort utvalg (evt. "ingen")
-- [ ] Kunde kan legge inn navn og nummer på trykk (uten ekstra kostnad)
-- [ ] Kunde kan bestille flere drakter i én ordre og få automatisk pakkerabatt basert på faste mengde-trinn
 - [ ] Kunde betaler med kort via Stripe eller med Vipps
 - [ ] Ved fullført betaling sendes bestillingsdetaljene automatisk til Kina-kontakten på WhatsApp
 - [ ] Eier logger inn i et admin-panel og ser innkommende bestillinger
@@ -60,6 +59,7 @@ Kunden kan legge inn og betale for en skreddersydd drakt-bestilling på nett, og
 | Strukturert liga/lag/sesong-valg fremfor fritekst | Kina-kontakten kan lage "alt", men et forutsigbart skjema er enklere å bygge og bruke enn fritekst/bilde-opplasting | — Pending |
 | Manuelt admin-panel for status/sporing, ikke automatisk WhatsApp-parsing | Automatisk tolkning av frie WhatsApp-svar er skjørt og upålitelig i v1 | — Pending |
 | Supabase + Vercel + Stripe + Vipps + WhatsApp API som foreslått stack | Brukerens eget forslag, verifiseres i research | — Pending |
+| Patch-valg er gjensidig utelukkende (kun én patch, inkl. "ingen", om gangen) | En ekte drakt bærer maks én konkurransepatch — oppdaget under manuell verifisering av Phase 2 | Validert i Phase 2 |
 
 ## Evolution
 
@@ -79,4 +79,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-07-07 after initialization*
+*Last updated: 2026-07-08 after Phase 2 (order-builder-storefront) completion*
