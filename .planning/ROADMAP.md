@@ -73,7 +73,7 @@ Plans:
 **Wave 1**
 
 - [x] 02-01-PLAN.md — Cart state core (types/reducer/context) + cascading team & patch logic + test infra (wave 1)
-- [ ] 02-02-PLAN.md — Zod name/number print validation schemas (wave 1)
+- [x] 02-02-PLAN.md — Zod name/number print validation schemas (wave 1)
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
@@ -146,7 +146,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Data Model | 5/5 | Complete   | 2026-07-07 |
-| 2. Order Builder & Storefront | 1/7 | In Progress|  |
+| 2. Order Builder & Storefront | 2/7 | In Progress|  |
 | 3. Payments — Checkout & Webhook-Driven Order Creation | 0/TBD | Not started | - |
 | 4. WhatsApp Supplier Notification | 0/TBD | Not started | - |
 | 5. Admin Panel — Order Management & Notifications | 0/TBD | Not started | - |
