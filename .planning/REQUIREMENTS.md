@@ -7,11 +7,11 @@
 
 ### Produktbestilling (PROD)
 
-- [ ] **PROD-01**: Kunde kan velge liga, lag og sesong fra et strukturert utvalg av store ligaer og kjente landslag
+- [x] **PROD-01**: Kunde kan velge liga, lag og sesong fra et strukturert utvalg av store ligaer og kjente landslag
 - [ ] **PROD-02**: Kunde kan velge størrelse
-- [ ] **PROD-03**: Kunde kan hake av patcher fra et fast, kort utvalg (inkl. "ingen")
+- [x] **PROD-03**: Kunde kan hake av patcher fra et fast, kort utvalg (inkl. "ingen")
 - [ ] **PROD-04**: Kunde kan legge inn navn og nummer på trykk, uten ekstra kostnad, med validering (lengde, tillatte tegn)
-- [ ] **PROD-05**: Kunde ser live oppdatert ordresammendrag med automatisk pakkerabatt når flere drakter legges til
+- [x] **PROD-05**: Kunde ser live oppdatert ordresammendrag med automatisk pakkerabatt når flere drakter legges til
 - [ ] **PROD-06**: Kunde har tilgang til en størrelsesguide/fit chart ved størrelsesvalg
 - [ ] **PROD-07**: Kunde ser en kort forklaringstekst nær checkout om hva som skjer etter betaling (bekreftelse og sporing kommer senere)
 
@@ -81,11 +81,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PROD-01 | Phase 2 | Pending |
+| PROD-01 | Phase 2 | Complete |
 | PROD-02 | Phase 2 | Pending |
-| PROD-03 | Phase 2 | Pending |
+| PROD-03 | Phase 2 | Complete |
 | PROD-04 | Phase 2 | Pending |
-| PROD-05 | Phase 2 | Pending |
+| PROD-05 | Phase 2 | Complete |
 | PROD-06 | Phase 2 | Pending |
 | PROD-07 | Phase 2 | Pending |
 | PAY-01 | Phase 3 | Pending |
