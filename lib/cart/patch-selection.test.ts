@@ -14,9 +14,8 @@ describe("togglePatch", () => {
     expect(togglePatch(["ligamerke"], "ligamerke")).toEqual(["ingen"]);
   });
 
-  it("adds another real patch alongside an existing one", () => {
+  it("selecting another real patch replaces the existing one (patches are mutually exclusive)", () => {
     expect(togglePatch(["ligamerke"], "champions-league")).toEqual([
-      "ligamerke",
       "champions-league",
     ]);
   });
