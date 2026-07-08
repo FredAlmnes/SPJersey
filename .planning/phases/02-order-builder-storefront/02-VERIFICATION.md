@@ -1,9 +1,11 @@
 ---
 phase: 02-order-builder-storefront
 verified: 2026-07-08T17:10:00Z
-status: human_needed
+status: passed
 score: 7/7 must-haves verified
 overrides_applied: 0
+human_verification_resolved: 2026-07-08T17:25:00Z
+human_verification_source: 02-HUMAN-UAT.md (both items passed)
 human_verification:
   - test: "Resize browser to a mobile width (<1024px) after CR-01's fix (commit 1dff826). Add at least one jersey to the cart. Confirm the cart collapses to a fixed bottom bar showing item count + total + chevron, that tapping it expands to a full bottom sheet, and that the collapsed bar never covers the configurator form's own 'Legg i handlekurv' submit button at any scroll position."
     expected: "Collapsed bar is a fixed h-16 (~64px) strip; expanding/collapsing works via the chevron; the form's submit button is always fully visible and clickable, never hidden behind the bar."
