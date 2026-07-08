@@ -36,7 +36,7 @@ findings:
   warning: 4
   info: 3
   total: 9
-status: issues_found
+status: critical_resolved
 ---
 
 # Phase 2: Code Review Report
@@ -144,6 +144,14 @@ This is both a locked UI-SPEC contract violation and a functional bug that block
 **Issue:** `\p{L}` matches Unicode category "Letter" but not combining marks (category `Mn`), which some accented characters decompose into under NFD normalization (e.g., certain macOS clipboard/file-system sources produce NFD text where "é" is `e` + a separate combining acute-accent codepoint). Input arriving in decomposed form could fail the regex even though it's a legitimate name, despite passing for the same visual character typed directly via a composed-form IME/keyboard.
 
 **Fix:** Call `.trim().normalize("NFC")` (via a `.transform()`) before applying the regex, to normalize decomposed input to its composed form first. Low priority given this is a narrow input-source edge case, but cheap to fix.
+
+## Resolution
+
+Both Critical findings (CR-01, CR-02) were fixed post-review and re-verified live via dev server + full test suite + build:
+- **CR-01:** Fixed in commit `1dff826` — `CartPanel` now implements the UI-SPEC's collapsed badge+total+chevron mobile bar that expands into a full bottom sheet; `storefront-client.tsx`'s safe-area padding (`pb-16`) is matched to the collapsed bar's actual `h-16` height instead of a guessed value.
+- **CR-02:** Fixed in commit `1dff826` — removing a cart item now clears `editingId`/resets the draft when the removed item matches the one currently open for editing, so "Oppdater" can no longer silently no-op against a since-removed item.
+
+Warnings (WR-01..WR-04) and Info items (IN-01..IN-03) remain open — none are correctness-blocking; deferred as follow-up polish, not required to close Phase 2.
 
 ---
 
