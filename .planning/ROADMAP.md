@@ -14,7 +14,7 @@ SpJersey replaces a manual WhatsApp-ordering business with a self-service Norweg
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation & Data Model** - Supabase schema, RLS, single admin auth, and static catalog config that every later phase depends on (completed 2026-07-07)
-- [ ] **Phase 2: Order Builder & Storefront** - Customer can configure a full custom-jersey order with live, correct pricing
+- [x] **Phase 2: Order Builder & Storefront** - Customer can configure a full custom-jersey order with live, correct pricing (completed 2026-07-08)
 - [ ] **Phase 3: Payments — Checkout & Webhook-Driven Order Creation** - Customer can pay by card or Vipps and an order is created only from a verified, idempotent webhook
 - [ ] **Phase 4: WhatsApp Supplier Notification** - Paid orders are automatically and duplicate-safely relayed to the China contact on WhatsApp
 - [ ] **Phase 5: Admin Panel — Order Management & Notifications** - Owner can manage orders end-to-end (confirm, track) with customer/owner notifications, fully in Norwegian/NOK
@@ -87,7 +87,7 @@ Plans:
 
 **Wave 4** *(blocked on Wave 3 completion)*
 
-- [ ] 02-07-PLAN.md — Human-verify checkpoint: end-to-end storefront flow (wave 4)
+- [x] 02-07-PLAN.md — Human-verify checkpoint: end-to-end storefront flow (wave 4)
 
 **UI hint**: yes
 
@@ -146,7 +146,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Data Model | 5/5 | Complete   | 2026-07-07 |
-| 2. Order Builder & Storefront | 6/7 | In Progress|  |
+| 2. Order Builder & Storefront | 7/7 | Complete   | 2026-07-08 |
 | 3. Payments — Checkout & Webhook-Driven Order Creation | 0/TBD | Not started | - |
 | 4. WhatsApp Supplier Notification | 0/TBD | Not started | - |
 | 5. Admin Panel — Order Management & Notifications | 0/TBD | Not started | - |
