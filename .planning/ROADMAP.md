@@ -79,7 +79,7 @@ Plans:
 
 - [x] 02-03-PLAN.md — Jersey selection fields: league/team selects, read-only season, size selector, size-guide modal (wave 2)
 - [x] 02-04-PLAN.md — Patch checkbox group + live-validated name/number print fields (wave 2)
-- [ ] 02-05-PLAN.md — Persistent cart panel + live order summary with bundle discount + undo-on-remove (wave 2)
+- [x] 02-05-PLAN.md — Persistent cart panel + live order summary with bundle discount + undo-on-remove (wave 2)
 
 **Wave 3** *(blocked on Wave 2 completion)*
 
@@ -146,7 +146,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Data Model | 5/5 | Complete   | 2026-07-07 |
-| 2. Order Builder & Storefront | 4/7 | In Progress|  |
+| 2. Order Builder & Storefront | 5/7 | In Progress|  |
 | 3. Payments — Checkout & Webhook-Driven Order Creation | 0/TBD | Not started | - |
 | 4. WhatsApp Supplier Notification | 0/TBD | Not started | - |
 | 5. Admin Panel — Order Management & Notifications | 0/TBD | Not started | - |
